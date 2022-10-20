@@ -22,6 +22,7 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char *
     return NULL; 
 } 
 
+//searchEmployeeByPhoneNumber, modify searchEmployeeByName to search for phone number since both use char
 PtrToEmployee searchEmployeeByPhoneNumber(PtrToConstEmployee ptr, int tableSize, char * targetPhoneNumber){ 
     const PtrToConstEmployee endPtr = ptr + tableSize; 
     for(; ptr < endPtr; ptr++) 
@@ -32,12 +33,4 @@ PtrToEmployee searchEmployeeByPhoneNumber(PtrToConstEmployee ptr, int tableSize,
     return NULL; 
 } 
 
-PtrToEmployee searchEmployeeByPhoneNumber(PtrToConstEmployee ptr, int tableSize, double targetSalary){ 
-    const PtrToConstEmployee endPtr = ptr + tableSize; 
-    for(; ptr < endPtr; ptr++) 
-    { 
-        if(ptr->salary == targetSalary) 
-            return (PtrToEmployee) ptr; 
-    } 
-    return NULL; 
-} 
+//searchEmployeeBySalary, modify searchEmployeeByNumber to take doubles and target salary

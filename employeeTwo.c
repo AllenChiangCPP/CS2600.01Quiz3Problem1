@@ -31,6 +31,8 @@ static int compareEmployeeName(const void *targetPtr, PtrToConstEmployee tableVa
     return strcmp((char *) targetPtr, tableValuePtr->name);//const void *targetPtr ==> typecast as char pointer then pass into strcmp() 
 } 
 
+//copy and modify compareEmployeeName code to create compareEmployeePhoneNumber to compare phone numbers
+//copy and modify compareEmployeeNumber code to create compareEmployeeSalary to compare salaries and take doubles
 //These are called wrappers. These functions are what you will use in your main!!! 
 PtrToEmployee searchEmployeeByNumber(PtrToConstEmployee ptr, int size, long number) 
 { 
@@ -41,3 +43,5 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int size, char* name)
 { 
     return searchEmployeeTable(ptr, size, name, compareEmployeeName); 
 } 
+//copy searchEmployeeByNumber wrapper to create searchEmployeeBySalary code, replace long with double
+//copy searchEmployeeByName wrapper to create searchEmployeeBy phoneNumber code

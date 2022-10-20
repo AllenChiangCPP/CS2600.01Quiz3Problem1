@@ -29,5 +29,7 @@ int main(void){
         printf("Employee Tony Bobcat is in record %d\n", matchPtr - EmployeeTable); 
     else 
         printf("Employee Tony Bobcat is NOT found in the record\n"); 
+
+    //add code for successful find on employee salary and employee phone number
     return EXIT_SUCCESS; 
 }
