@@ -34,3 +34,12 @@ PtrToEmployee searchEmployeeByPhoneNumber(PtrToConstEmployee ptr, int tableSize,
 } 
 
 //searchEmployeeBySalary, modify searchEmployeeByNumber to take doubles and target salary
+PtrToEmployee searchEmployeeBySalary(PtrToConstEmployee ptr, int tableSize, double targetSalary){ 
+    const PtrToConstEmployee endPtr = ptr + tableSize; 
+    for(; ptr < endPtr; ptr++) 
+    { 
+        if(ptr->salary == targetSalary) 
+            return (PtrToEmployee) ptr; 
+    } 
+    return NULL; 
+} 
